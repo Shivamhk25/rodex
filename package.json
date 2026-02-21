@@ -1,0 +1,63 @@
+{
+  "name": "rodex",
+  "version": "1.0.0",
+  "description": "A generic Redis + Database cache-aside wrapper with TypeScript support. Import, pass connections, and manage cached data effortlessly.",
+  "author": "Shivam Chauhan",
+  "license": "MIT",
+  "engines": {
+    "node": "^12.x || ^14.x || ^16.x || ^18.x || ^20.x"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "npm run build && jest",
+    "test:ci": "jest --ci",
+    "build": "npx tsc",
+    "build:watch": "npx tsc --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.{ts,js,json,md}\"",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "redis",
+    "cache",
+    "cache-aside",
+    "database",
+    "mysql",
+    "mongodb",
+    "wrapper",
+    "typescript",
+    "typedi"
+  ],
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "bunyan": "^1.8.15",
+    "mysql2": "^2.3.3",
+    "redis": "^2.8.0",
+    "reflect-metadata": "^0.2.2",
+    "typedi": "^0.10.0"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.42",
+    "@types/bunyan": "^1.8.11",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^12.20.55",
+    "@types/redis": "^2.8.32",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^27.5.1",
+    "jest-environment-node": "^27.5.1",
+    "ts-jest": "^27.1.5",
+    "ts-node": "^10.9.2",
+    "prettier": "^2.8.8",
+    "typescript": "^4.9.5"
+  }
+}
